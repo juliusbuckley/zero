@@ -8,10 +8,10 @@ redis.flushall();
 const app = express();
 const port = process.env.PORT || 8020;
 
-app.use(express.static(path.join(__dirname,'../client')));
+app.use(express.static(path.join(__dirname, '../client')));
 
 slackRoutes(app);
 
-app.listen(port,() => {
+app.listen(port, () => {
   console.log(`app.js has been served on port: ${port}`);
 });
