@@ -4,6 +4,8 @@
   "description": "Zero searches your slack channel for url's and saves them to a database.",
   "main": "app.js",
   "scripts": {
+    "start": "npm run prod:buildserver & node ./server-dist/app.js",
+    "prod:buildserver": "babel ./server -d ./server-dist --presets es2015,stage-2 --copy-files",
     "dev:start": "nodemon ./server/app.js --exec babel-node --presets es2015,stage-2 & lt --port 8020",
     "dev:webpack": "webpack --watch",
     "dev:fullstart": "npm run dev:start & npm run dev:webpack",
