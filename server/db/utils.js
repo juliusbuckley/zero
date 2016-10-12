@@ -19,7 +19,7 @@ const parseData = (obj) => {
     if (obj.text[0] === '<') {
       obj.text = obj.text.slice(1, obj.text.length - 1);
     }
-      //Check to see if text is valid url
+    //Check to see if text is valid url
     if (isURL(obj.text)) {
       addUrl('urls', obj.text, obj.text);
     }
