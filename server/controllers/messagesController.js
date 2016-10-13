@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { addUrl, parseData } from '../db/utils';
+import { addUrl, parseData, getUrls } from '../db/utils';
 
 const getMessages = (req, res) => {
   //GET request to slack API endpoint for all messages containing search query
@@ -20,7 +20,7 @@ const getMessages = (req, res) => {
             }
           }
         });
-        res.send(JSON.stringify('test'));
+        res.send('Success: all urls saved to database!');
       })
       .catch((err) => {
         console.log(`Error: ${err}`);

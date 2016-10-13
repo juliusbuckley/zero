@@ -29,7 +29,11 @@ const parseData = (obj) => {
 //Get all urls
 const getUrls = (key) => {
   client.hgetall(key, (err, obj) => {
-    console.dir(obj);
+    if (err) {
+      console.log(`Error: ${err}`);
+    } else {
+      console.dir(obj);
+    }
   });
 };
 
