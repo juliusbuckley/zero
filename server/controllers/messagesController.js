@@ -20,7 +20,7 @@ const getMessages = (req, res) => {
             }
           }
         });
-        res.send('Success: all urls saved to database!');
+        res.json(getUrls());
       })
       .catch((err) => {
         console.log(`Error: ${err}`);

@@ -32,7 +32,7 @@ const getUrls = (key) => {
     if (err) {
       console.log(`Error: ${err}`);
     } else {
-      console.dir(obj);
+      return obj;
     }
   });
 };
