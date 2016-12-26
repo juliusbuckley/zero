@@ -2,8 +2,7 @@ import express from 'express';
 import path from 'path';
 import slackRoutes from './routes/slackRoutes';
 // import redis from './db/redisClient';
-
-redis.flushall();
+// redis.flushall();
 
 const app = express();
 const port = 8080;
